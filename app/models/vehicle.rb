@@ -5,4 +5,5 @@ class Vehicle < ApplicationRecord
   validates :rentMoney, presence: true
   belongs_to :model, class_name: "Model", foreign_key: "model_id"
   belongs_to :category, class_name: "Category", foreign_key: "category_id"
+  has_many :rentals
 end

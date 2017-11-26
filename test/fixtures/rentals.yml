@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2017-11-27 01:11:00
+  finish: 2017-11-27 01:11:00
+  paymentSt: false
+
+two:
+  start: 2017-11-27 01:11:00
+  finish: 2017-11-27 01:11:00
+  paymentSt: false

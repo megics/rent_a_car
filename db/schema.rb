@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171126215313) do
+ActiveRecord::Schema.define(version: 20171126221100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,12 +28,31 @@ ActiveRecord::Schema.define(version: 20171126215313) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "customers", force: :cascade do |t|
+    t.string "cusFName"
+    t.string "cusLName"
+    t.boolean "cusGender", default: false
+    t.string "cusMail"
+    t.string "cusPhone"
+    t.text "cusAdress"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "models", force: :cascade do |t|
     t.string "modelName"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "brand_id"
     t.index ["brand_id"], name: "index_models_on_brand_id"
+  end
+
+  create_table "rentals", force: :cascade do |t|
+    t.datetime "startDate"
+    t.datetime "finishDate"
+    t.boolean "paymentSt", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "vehicles", force: :cascade do |t|
