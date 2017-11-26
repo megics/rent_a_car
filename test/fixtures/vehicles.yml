@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kilometer: MyString
+  year: MyString
+  engineCap: MyString
+  rentMoney: MyString
+  inspectionDate: MyString
+  rented: MyString
+
+two:
+  kilometer: MyString
+  year: MyString
+  engineCap: MyString
+  rentMoney: MyString
+  inspectionDate: MyString
+  rented: MyString
