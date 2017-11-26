@@ -3,4 +3,5 @@ class Vehicle < ApplicationRecord
   validates :kilometer, presence: true
   validates :year, presence: true, length: { is: 4 }
   validates :rentMoney, presence: true
+  belongs_to :model
 end
