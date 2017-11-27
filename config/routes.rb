@@ -5,5 +5,8 @@ Rails.application.routes.draw do
       sessions: 'users/sessions'
   }
 
-  resources :vehicles
+  resources :categories do
+    resources :vehicles
+  end
+
 end
