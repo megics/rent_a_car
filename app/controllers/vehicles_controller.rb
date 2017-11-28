@@ -11,7 +11,7 @@ class VehiclesController < ApplicationController
   def create
     @vehicle = Vehicle.new(vehicle_params)
     if @vehicle.save
-      redirect to @vehicle
+      redirect_to @vehicle
     else
       render 'new'
     end
@@ -37,7 +37,7 @@ class VehiclesController < ApplicationController
   def destroy
     @vehicle = Vehicle.find(params[:id])
     @vehicle.destroy
-    redirect to vehicles_path
+    redirect_to vehicles_path
   end
 
 

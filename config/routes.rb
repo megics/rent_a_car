@@ -13,5 +13,6 @@ Rails.application.routes.draw do
     resources :models
   end
 
+  resources :customers
 
 end
