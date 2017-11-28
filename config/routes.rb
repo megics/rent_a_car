@@ -9,4 +9,9 @@ Rails.application.routes.draw do
     resources :vehicles
   end
 
+  resources :brands do
+    resources :models
+  end
+
+
 end
