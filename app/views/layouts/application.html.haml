@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Rent A Car
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %p.notice= notice
+    %p.alert= alert
+    %header.navbar.navbar-inverse
+      .navbar-class
+        .container
+          %ul.nav.navbar-nav
+            %li.active
+              %a{:href => "#"} HOME
+            %li= link_to "ABOUT", root_path
+            %li= link_to "VEHICLES", '#'
+            %li= link_to "CATEGORIES", '#'
+            %li= link_to "BRANDS", '#'
+            %li= link_to "GALLERY", '#'
+            %li
+              %a{:href => "#"} CONTACT
+            %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+    = yield
