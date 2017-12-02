@@ -1,0 +1,30 @@
+%h1 VEHICLES
+%table{:border =>2, :width => "100%"}
+  %tr
+    %th LicensePlate
+    %th Kilometer
+    %th Year
+    %th Engine Capacity
+    %th Rent Money
+    %th Inspection Date
+    %th Rent Status
+    %th Vehicle Category
+    %th Vehicle Brand
+    %th Vehicle Model
+    %th{:colspan => "3"}
+  - @vehicles.each do |v|
+    %tr
+      %td= v.licensePlate
+      %td= v.kilometer
+      %td= v.year
+      %td= v.engineCapacity
+      %td= v.rentMoney
+      %td= v.inspectionDate
+      %td= v.rented
+      %td= v.category.catName
+      %td= v.model.brand.brandName
+      %td= v.model.modelName
+%br/
+%br/
+%br/
+= link_to 'Back to Homepage', root_path

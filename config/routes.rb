@@ -13,6 +13,15 @@ Rails.application.routes.draw do
     resources :models
   end
 
+  resources :models do
+    resources :vehicles
+  end
+
+
+  resources :models
+
+  resources :vehicles
+
   resources :customers
 
 end
