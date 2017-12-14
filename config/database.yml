@@ -1,23 +1,12 @@
 default: &default
   adapter: postgresql
-  host: localhost
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  timeout: 5000
+  username: megicelik
+  password: 123456
 
 development:
   <<: *default
-  database: rent_a_car_development
-  username: megicelik
-  password: 123456
-
-test:
-  <<: *default
-  database: rent_a_car_test
-  username: megicelik
-  password: 123456
-
-production:
-  <<: *default
-  database: rent_a_car_production
-  username: megicelik
-  password: 123456
+  database: "rent_a_car"
