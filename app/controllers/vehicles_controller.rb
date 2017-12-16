@@ -5,7 +5,9 @@ class VehiclesController < ApplicationController
   end
 
   def new
-    @vehicle = Vehicle.new(vehicle_params)
+    @vehicle = Vehicle.new
+    @category = Category.all.collect{|m| [m.catName, m.id] }
+    @model = Model.all.collect{|m| [m.modelName, m.id] }
   end
 
   def create
@@ -44,7 +46,7 @@ class VehiclesController < ApplicationController
   private
 
   def vehicle_params
-    params.require(:vehicle).permit!
+    params.require(:vehicle).permit(:licensePlate, :kilometer, :year, :engineCapacity, :rentMoney, :inspectionDate, :rented, {model_ids:[]}, {category_ids:[]})
   end
 
 end

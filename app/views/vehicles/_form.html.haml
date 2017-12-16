@@ -1,0 +1,44 @@
+= simple_form_for @vehicle do |f|
+  - if @vehicle.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@vehicle.errors.count, "error")
+        prohibited
+        this article from being saved:
+      %ul
+        - @vehicle.errors.full_messages.each do |msg|
+          %li= msg
+  %p
+    = f.label :licensePlate
+    %br/
+    = f.text_field :licensePlate
+  %p
+    = f.label :kilometer
+    %br/
+    = f.text_field :kilometer
+  %p
+    = f.label :year
+    %br/
+    = f.text_field :year
+  %p
+    = f.label :engineCapacity
+    %br/
+    = f.text_field :engineCapacity
+  %p
+    = f.label :rentMoney
+    %br/
+    = f.text_field :rentMoney
+  %p
+    = f.label :inspectionDate
+    %br/
+    = f.text_field :inspectionDate
+  %p
+    = f.label :rented
+    %br/
+    = f.text_field :rented
+  %p
+    = f.collection_radio_buttons(:category_id, Category.all, :id, :with_name)
+  %p
+    = f.collection_radio_buttons(:model_id, Model.all, :id, :with_name)
+  %p
+    = f.submit

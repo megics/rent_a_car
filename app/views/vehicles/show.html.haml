@@ -1,0 +1,34 @@
+%p
+  %strong License Plate:
+  = @vehicle.licensePlate
+%p
+  %strong Kilometer:
+  = @vehicle.kilometer
+%p
+  %strong Year:
+  = @vehicle.year
+%p
+  %strong Engine Capacity:
+  = @vehicle.engineCapacity
+%p
+  %strong Rent Money($):
+  = @vehicle.rentMoney
+%p
+  %strong Vehicle Inspection Date:
+  = @vehicle.inspectionDate
+%p
+  %strong Rented Status:
+  = @vehicle.rented
+%p
+  %strong Category:
+  = @vehicle.category.catName
+%p
+  %strong Brand:
+  = @vehicle.model.brand.brandName
+%p
+  %strong Model:
+  = @vehicle.model.modelName
+
+= link_to 'Back', vehicles_path
+|
+= link_to 'Edit', edit_vehicle_path(@vehicle)
