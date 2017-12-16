@@ -9,7 +9,7 @@ class CustomersController < ApplicationController
   end
 
   def new
-    @customer = Customer.new(customer_params)
+    @customer = Customer.new
   end
 
   def create

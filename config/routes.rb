@@ -23,10 +23,6 @@ Rails.application.routes.draw do
     resources :models
   end
 
-  resources :customers do
-    resources :rentals
-  end
-
   resources :categories
 
   resources :models
