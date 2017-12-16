@@ -1,0 +1,20 @@
+%p
+  %strong Start Date:
+  = @rental.startDate
+%p
+  %strong Finish Date:
+  = @rental.finishDate
+%p
+  %strong Payment Status:
+  = @rental.paymentSt
+%p
+  %strong License Plate for Rental:
+  = @rental.vehicle.licensePlate
+%p
+  %strong Customer:
+  = @rental.customer.full_name
+
+%br/
+%br/
+= link_to 'Back', rentals_path
+= link_to 'Edit', edit_rental_path(@rental)

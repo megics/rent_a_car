@@ -1,0 +1,32 @@
+= simple_form_for @rental do |f|
+  - if @rental.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@rental.errors.count, "error")
+        prohibited
+        this article from being saved:
+      %ul
+        - @rental.errors.full_messages.each do |msg|
+          %li= msg
+  %p
+    = f.label :startDate
+    %br/
+    = f.text_field :startDate
+  %p
+    = f.label :finishDate
+    %br/
+    = f.text_field :finishDate
+  %p
+    = f.label :paymentSt
+    %br/
+    = f.text_field :paymentSt
+  %p
+    = f.label :vehicle_id
+    %br/
+    = f.text_field :vehicle_id
+  %p
+    = f.label :customer_id
+    %br/
+    =f.text_field :customer_id
+  %p
+    = f.submit
