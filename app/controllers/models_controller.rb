@@ -5,7 +5,7 @@ class ModelsController < ApplicationController
   end
 
   def show
-    @model = Model.find(id: params[:id])
+    @model = Model.find_by(id: params[:id])
   end
 
 end

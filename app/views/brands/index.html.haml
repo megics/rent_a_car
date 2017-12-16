@@ -1,0 +1,9 @@
+%h1 BRANDS FOR VEHICLES
+- @brands.each do |b|
+  %li
+    = link_to b.brandName, model_path(b)
+    %br/
+    = b.brandDesc
+  %br/
+
+= link_to 'Back To Homepage', root_path

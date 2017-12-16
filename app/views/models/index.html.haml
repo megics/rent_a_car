@@ -1,0 +1,7 @@
+%h1 MODELS FOR VEHICLES
+- @models.each do |m|
+  %li
+    = link_to m.modelName, vehicle_path(m)
+  %br/
+
+= link_to 'Back To Homepage', root_path
