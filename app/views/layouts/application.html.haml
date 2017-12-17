@@ -2,30 +2,44 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Rent A Car
+    %title Rent a Car
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %p.notice= notice
-    %p.alert= alert
-    %header.navbar.navbar-inverse
-      .navbar-class
-        .container
-          %ul.nav.navbar-nav
-            %li.active
-              %a{:href => "#"} HOME
+    - flash.each do |key, value|
+      %div{:class => "alert alert-#{key} alert-dismissable"}
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+        = value
+    / this is code we will cut out and put inside menu partials
+    %nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#mainNavbar", "data-toggle" => "collapse", :type => "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          = link_to "RENT A CAR", '#', class: 'navbar-brand'
+        #navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to "HOME" , root_path
             %li= link_to "VEHICLES", vehicles_path
             %li= link_to "CATEGORIES", categories_path
             %li= link_to "BRANDS", brands_path
-            %li= link_to "RENTAL OPERATIONS", rentals_path
-            %li= link_to "CUSTOMER OPERATIONS", customers_path
-            %li
-              %a{:href => "#"} CONTACT
-            %li= link_to "Sign In Admin", new_admin_session_path
+            %li= link_to "CONTACT", '#'
             - if current_user
+              %li= link_to "RENTAL LIST", rentals_path
+              %li= link_to "CUSTOMER LIST", customers_path
               %li= link_to "Sign Out", destroy_user_session_path, method: :delete
             - else
               %li= link_to "Sign In", new_user_session_path
               %li= link_to "Sign Up", new_user_registration_path
-    = yield
+            %li= link_to "Sign In Admin", new_admin_session_path
+    .container
+      = yield
+    .row{:style => "margin-top: 30px;"}
+      %footer.footer{:style => "height: 40px; width: 100%;"}
+        .footer-content
+          %center
+            %p.text-muted{:style => "line-height: 30px"} Copyright © 2017 MELİHA GİZEM ÇELİK
+
