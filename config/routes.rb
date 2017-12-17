@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   get 'rentals/index'
 
   get 'rentals/show'
