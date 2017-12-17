@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :admins
+  devise_for :admins, controllers: {
+      session: 'admins/sessions'
+  }
   get 'rentals/index'
 
   get 'rentals/show'
