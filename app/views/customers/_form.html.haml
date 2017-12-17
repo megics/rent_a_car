@@ -1,0 +1,36 @@
+= simple_form_for @customer do |f|
+  - if @customer.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@customer.errors.count, "error")
+        prohibited
+        this article from being saved:
+      %ul
+        - @customer.errors.full_messages.each do |msg|
+          %li= msg
+  %p
+    = f.label :cusFName
+    %br/
+    = f.text_field :cusFName
+  %p
+    = f.label :cusLName
+    %br/
+    = f.text_field :cusLName
+  %p
+    = f.label :cusGender
+    %br/
+    = f.text_field :cusGender
+  %p
+    = f.label :cusMail
+    %br/
+    = f.text_field :cusMail
+  %p
+    = f.label :cusPhone
+    %br/
+    =f.text_field :cusPhone
+  %p
+    = f.label :cusAdress
+    %br/
+    =f.text_field :cusAdress
+  %p
+    = f.submit

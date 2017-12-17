@@ -1,0 +1,23 @@
+%p
+  %strong ID:
+  = @customer.id
+%p
+  %strong Customer Name:
+  = @customer.cusFName
+%p
+  %strong Customer Surname:
+  = @customer.cusLName
+%p
+  %strong Gender:
+  = @customer.cusGender
+%p
+  %strong Mail:
+  = @customer.cusMail
+%p
+  %strong Telephone:
+  = @customer.cusPhone
+
+%br/
+%br/
+= link_to 'Back', customers_path
+= link_to 'Edit', edit_customer_path(@customer)
