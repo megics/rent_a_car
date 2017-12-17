@@ -15,7 +15,6 @@
           %ul.nav.navbar-nav
             %li.active
               %a{:href => "#"} HOME
-            %li= link_to "ABOUT", root_path
             %li= link_to "VEHICLES", vehicles_path
             %li= link_to "CATEGORIES", categories_path
             %li= link_to "BRANDS", brands_path
@@ -23,6 +22,7 @@
             %li= link_to "CUSTOMER OPERATIONS", customers_path
             %li
               %a{:href => "#"} CONTACT
+            %li= link_to "Sign In Admin", new_admin_session_path
             - if current_user
               %li= link_to "Sign Out", destroy_user_session_path, method: :delete
             - else
