@@ -1,0 +1,20 @@
+= simple_form_for @brand do |f|
+  - if @brand.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@brand.errors.count, "error")
+        prohibited
+        this brand from being saved:
+      %ul
+        - @brand.errors.full_messages.each do |msg|
+          %li= msg
+  %p
+    = f.label :brandName
+    %br/
+    = f.text_field :brandName
+  %p
+    = f.label :brandDesc
+    %br/
+    = f.text_field :brandDesc
+  %p
+    = f.submit

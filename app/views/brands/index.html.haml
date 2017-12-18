@@ -16,3 +16,6 @@
   %br/
 
 = link_to 'Back to Homepage', root_path
+- if current_user.role_id == 2
+  |
+  = link_to 'New Brand', new_brand_path
