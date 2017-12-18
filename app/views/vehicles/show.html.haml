@@ -30,5 +30,6 @@
   = @vehicle.model.modelName
 
 = link_to 'Back', vehicles_path
-|
-= link_to 'Edit', edit_vehicle_path(@vehicle)
+- if user_signed_in?
+  |
+  = link_to 'Edit', edit_vehicle_path(@vehicle)
