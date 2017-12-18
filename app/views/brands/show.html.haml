@@ -1,0 +1,7 @@
+%h1
+  = @brand.brandName
+  MODELS:
+%br/
+- @brand.models.each do |c|
+  %li
+    =link_to c.modelName, model_path(c)

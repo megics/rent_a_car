@@ -1,7 +1,7 @@
 %h1 BRANDS FOR VEHICLES
 - @brands.each do |b|
   %li
-    = link_to b.brandName, model_path(b)
+    = link_to b.brandName, brand_path(b.id)
     %br/
     = b.brandDesc
   %br/
