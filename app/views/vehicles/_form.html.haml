@@ -4,7 +4,7 @@
       %h2
         = pluralize(@vehicle.errors.count, "error")
         prohibited
-        this article from being saved:
+        this vehicle from being saved:
       %ul
         - @vehicle.errors.full_messages.each do |msg|
           %li= msg
@@ -37,8 +37,14 @@
     %br/
     = f.text_field :rented
   %p
-    = f.collection_radio_buttons(:category_id, Category.all, :id, :with_name)
+    = f.label :category_id
+    %br/
+    = f.collection_select :category_id, Category.order(:catName),:id,:catName, include_blank: false
   %p
-    = f.collection_radio_buttons(:model_id, Model.all, :id, :with_name)
+    = f.label :model_id
+    %br/
+    = f.collection_select :model_id, Model.order(:modelName),:id,:modelName, include_blank: false
+    %br/
+    %br/
   %p
     = f.submit

@@ -46,7 +46,7 @@ class VehiclesController < ApplicationController
   private
 
   def vehicle_params
-    params.require(:vehicle).permit(:licensePlate, :kilometer, :year, :engineCapacity, :rentMoney, :inspectionDate, :rented, {model_ids:[]}, {category_ids:[]})
+    params.require(:vehicle).permit(:licensePlate, :kilometer, :year, :engineCapacity, :rentMoney, :inspectionDate, :rented, :model_id, :category_id)
   end
 
 end
