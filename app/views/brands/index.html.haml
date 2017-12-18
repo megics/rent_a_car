@@ -1,4 +1,13 @@
+= image_tag "renault.jpg", height: 75 , weight: 75
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+= image_tag "opel.jpg", height: 75 , weight: 75
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+= image_tag "volvo.jpg", height: 75 , weight: 75
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+= image_tag "bmw.jpg", height: 75 , weight: 75
+
 %h1 BRANDS FOR VEHICLES
+
 - @brands.each do |b|
   %li
     = link_to b.brandName, brand_path(b.id)
