@@ -1,7 +1,16 @@
 class CustomersController < ApplicationController
 
+  respond_to :html, :js, :pdf
+
   def index
     @customers = Customer.all
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render :pdf => "customers"
+      end
+    end
   end
 
   def show
