@@ -4,7 +4,7 @@
       %h2
         = pluralize(@rental.errors.count, "error")
         prohibited
-        this article from being saved:
+        this rental from being saved:
       %ul
         - @rental.errors.full_messages.each do |msg|
           %li= msg
@@ -23,10 +23,10 @@
   %p
     = f.label :vehicle_id
     %br/
-    = f.text_field :vehicle_id
+    = f.collection_select :vehicle_id, Vehicle.order(:licensePlate),:id,:licensePlate, include_blank: false
   %p
     = f.label :customer_id
     %br/
-    =f.text_field :customer_id
+    = f.collection_select :customer_id, Customer.order(:cusPhone),:id,:cusPhone, include_blank: false
   %p
     = f.submit
