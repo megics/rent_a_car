@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get 'rentals/destroy'
 
+  get 'contact/index'
   root 'welcome#index'
 
   devise_for :users, controllers: {
