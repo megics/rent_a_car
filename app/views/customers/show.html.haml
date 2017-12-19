@@ -25,3 +25,5 @@
 = link_to 'Back', customers_path
 |
 = link_to 'Edit', edit_customer_path(@customer)
+|
+= link_to 'Delete', customer_path(@customer), method: :delete, data: { confirm: 'Are you certain you want to delete this?' }

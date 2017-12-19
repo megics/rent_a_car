@@ -19,3 +19,5 @@
 = link_to 'Back', rentals_path
 |
 = link_to 'Edit', edit_rental_path(@rental)
+|
+= link_to 'Delete', rental_path(@rental), method: :delete, data: { confirm: 'Are you certain you want to delete this?' }
