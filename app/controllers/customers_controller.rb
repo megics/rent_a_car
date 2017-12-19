@@ -1,14 +1,17 @@
 class CustomersController < ApplicationController
 
-  respond_to :html, :js, :pdf
+  require 'responders'
+  respond_to :pdf
+  respond_to :haml
 
   def index
     @customers = Customer.all
 
     respond_to do |format|
-      format.html
+      format.haml
       format.pdf do
-        render :pdf => "customers"
+        render pdf: 'REPORT 1',
+               template: 'customers/index.pdf.erb'
       end
     end
   end

@@ -269,6 +269,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.4)
   rails_admin (~> 1.2)
+  responders
   sass-rails (>= 3.2)
   selenium-webdriver
   simple_form
