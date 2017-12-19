@@ -33,3 +33,6 @@
 - if user_signed_in?
   |
   = link_to 'Edit', edit_vehicle_path(@vehicle)
+  |
+  = link_to 'Delete', vehicle_path(@vehicle), method: :delete, data: { confirm: 'Are you certain you want to delete this?' }
+
