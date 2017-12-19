@@ -24,13 +24,3 @@
       %td= v.category.catName
       %td= v.model.brand.brandName
       %td= v.model.modelName
-%br/
-%br/
-%br/
-= link_to 'Back to Homepage', root_path
-|
-= link_to 'Get PDF to rental list', vehicles_path(@vehicles, :format => :pdf)
-- if user_signed_in?
-  |
-  = link_to 'New Vehicle', new_vehicle_path
-

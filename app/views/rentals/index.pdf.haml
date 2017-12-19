@@ -16,12 +16,3 @@
       %td= v.paymentSt
       %td= v.vehicle.licensePlate
       %td= v.customer.full_name
-%br/
-%br/
-%br/
-= link_to 'Back to Homepage', root_path
-|
-= link_to 'New Rental', rentals_new_path
-|
-= link_to 'Get PDF to rental list', rentals_path(@rentals, :format => :pdf)
-
