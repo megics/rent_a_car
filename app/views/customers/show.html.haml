@@ -9,7 +9,10 @@
   = @customer.cusLName
 %p
   %strong Gender:
-  = @customer.cusGender
+  - if @customer.cusGender == false
+    Female
+  - else
+    Male
 %p
   %strong Mail:
   = @customer.cusMail

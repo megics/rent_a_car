@@ -14,7 +14,11 @@
       %td= v.id
       %td= v.cusFName
       %td= v.cusLName
-      %td= v.cusGender
+      %td
+        -if v.cusGender == false
+          Female
+        -else
+          Male
       %td= v.cusMail
       %td= v.cusPhone
       %td= v.cusAdress

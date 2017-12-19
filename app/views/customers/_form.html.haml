@@ -19,7 +19,7 @@
   %p
     = f.label :cusGender
     %br/
-    = f.text_field :cusGender
+    = f.select :cusGender, [["Male", 0], ["Female", 1]]
   %p
     = f.label :cusMail
     %br/
