@@ -1,10 +1,18 @@
-= image_tag "renault.jpg", height: 75 , weight: 75
+= image_tag "renault.jpg", :usemap => "#image-map1", height: 75, weight:75
+%map{:name => "image-map1"}
+  %area{:alt => "RENAULT", :coords => "5,5,69,71", :href => "https://www.renault.com", :shape => "rect", :target => "", :title => "RENAULT"}/
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-= image_tag "opel.jpg", height: 75 , weight: 75
+= image_tag "opel.jpg", :usemap => "#image-map2"
+%map{:name => "image-map2"}
+  %area{:alt => "OPEL", :coords => "37,30,27", :href => "https://www.opel.com", :shape => "circle", :target => "", :title => "OPEL"}/
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-= image_tag "volvo.jpg", height: 75 , weight: 75
+= image_tag "volvo.jpg", :usemap => "#image-map3"
+%map{:name => "image-map3"}
+  %area{:alt => "VOLVO", :coords => "37,39,36", :href => "https://www.volvo.com", :shape => "circle", :target => "", :title => "VOLVO"}/
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-= image_tag "bmw.jpg", height: 75 , weight: 75
+= image_tag "bmw.jpg", :usemap => "#image-map4"
+%map{:name => "image-map4"}
+  %area{:alt => "BMW", :coords => "38,38,36", :href => "https://www.bmw.com", :shape => "circle", :target => "", :title => "BMW"}/
 
 %h1 BRANDS FOR VEHICLES
 
