@@ -1,4 +1,4 @@
-= image_tag "renault.jpg", :usemap => "#image-map1", height: 75, weight:75
+= image_tag "renault.jpg", :usemap => "#image-map1"
 %map{:name => "image-map1"}
   %area{:alt => "RENAULT", :coords => "5,5,69,71", :href => "https://www.renault.com", :shape => "rect", :target => "", :title => "RENAULT"}/
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -13,6 +13,30 @@
 = image_tag "bmw.jpg", :usemap => "#image-map4"
 %map{:name => "image-map4"}
   %area{:alt => "BMW", :coords => "38,38,36", :href => "https://www.bmw.com", :shape => "circle", :target => "", :title => "BMW"}/
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+= image_tag "fiat.jpg", :usemap => "#image-map5"
+%map{:name => "image-map5"}
+  %area{:alt => "FIAT", :coords => "37,39,30", :href => "https://www.fiat.com.tr", :shape => "circle", :target => "", :title => "FIAT"}/
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+= image_tag "skoda.jpg", :usemap => "#image-map6"
+%map{:name => "image-map6"}
+  %area{:alt => "FIAT", :coords => "38,38,33", :href => "https://www.skoda.com", :shape => "circle", :target => "", :title => "SKODA"}/
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+= image_tag "mazda.jpg", :usemap => "#image-map7"
+%map{:name => "image-map7"}
+  %area{:alt => "MAZDA", :coords => "3,2,72,74", :href => "https://www.mazda.com.tr", :shape => "rect", :target => "", :title => "MAZDA"}/
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+= image_tag "mercedes.jpg", :usemap => "#image-map8"
+%map{:name => "image-map8"}
+  %area{:alt => "MERCEDES", :coords => "1,1,74,73", :href => "https://www.mercedes-benz.com", :shape => "rect", :target => "", :title => "MERCEDES"}/
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+= image_tag "nissan.jpg", :usemap => "#image-map9"
+%map{:name => "image-map9"}
+  %area{:alt => "NISSAN", :coords => "37,36,30", :href => "https://www.nissan.com.tr", :shape => "circle", :target => "", :title => "NISSAN"}/
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+= image_tag "citroen.jpg", :usemap => "#image-map10"
+%map{:name => "image-map10"}
+  %area{:alt => "CITROEN", :coords => "1,0,74,74", :href => "https://www.citroen.com.tr", :shape => "rect", :target => "", :title => "CITROEN"}/
 
 %h1 BRANDS FOR VEHICLES
 
@@ -21,8 +45,13 @@
     = link_to b.brandName, brand_path(b.id)
     %br/
     = b.brandDesc
-  %br/
+%br/
+%br/
+%div{:style => "text-align:center"}
+  = image_tag "#{rand(11)}.jpg"
 
+%br/
+%br/
 = link_to 'Back to Homepage', root_path
 - if current_user && current_user.role_id == 2
   |
