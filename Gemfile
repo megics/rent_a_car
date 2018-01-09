@@ -41,6 +41,7 @@ gem 'rails_admin', '~> 1.2'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'responders'
+gem 'open-weather'
 
 
 group :development, :test do

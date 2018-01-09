@@ -2,6 +2,15 @@ class BrandsController < ApplicationController
 
   def index
     @brands = Brand.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml=&gt; @brands }
+    end
+  end
+
+  def api
+    render html: '<div>Renault<br>Opel<br>Volvo<br>BMW<br></div>'.html_safe
   end
 
   def show

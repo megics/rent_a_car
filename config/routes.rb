@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  get 'brands/api', to: 'brands#api'
+
   get 'rentals/index'
 
   get 'rentals/show'
